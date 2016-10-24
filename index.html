@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS布局学习</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .header{
+            height:60px;
+            background-color: black;
+            opacity: 0.5;
+            margin: 0 auto;
+        }
+        .container{
+            width:800px;
+            margin: 10px auto;
+            position: relative;
+        }
+        .container-top{
+            width: 100%;
+            height: 600px;
+            position: relative;
+        }
+        .left{
+            position: absolute;
+            left:0;
+            top:0;
+            width:500px;
+            height:100%;
+            background-color: grey;
+        }
+        .right{
+            width: 300px;
+            height:100%;
+            background-color: bisque;
+            position: absolute;
+            left: 500px;;
+        }
+        .right-block{
+            padding: 5px;
+            background-color: azure;
+            height:200px
+        }
+        .right-block img{
+            height:100%;
+            width:100%;
+        }
+        .container-middle{
+            width:100%;
+            height:200px;
+            margin-top:10px;
+            background-color: salmon;
+        }
+        .container-middle   h2 ::before {
+            width:10px;
+            height:10px;
+            background-color: blue;
+            display: inline-block;
+            margin-right:10px;
+        }
+        .container-middle h2 {
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .image-list{
+            margin-top:10px;
+            height:900px;
+            width:100%;
+        }
+        .image-list div {
+            width: 33.33%;
+            float: left;
+            padding: 0 5px 0 5px;
+        }
+        .image-list div img  {
+            height:100%;
+            width:100%;
+        }
+        /*.image-list div :first-child{*/
+            /*padding-right: 10px;*/
+        /*}*/
+        /*.image-list div:last-child{*/
+            /*padding-left: 10px;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <header class = "header">
+
+    </header>
+
+    <div class = "container">
+        <!--顶部-->
+        <div class = "container-top">
+            <div class = "left">
+
+            </div>
+            <div class = "right">
+                <div class = "right-block">
+                    <img src="./img/1.jpg">
+                </div>
+                <div class = "right-block">
+                    <img src="./img/2.jpg">
+                </div>
+                <div class = "right-block">
+                    <img src="./img/3.jpg">
+                </div>
+            </div>
+        </div>
+
+        <!--中部-->
+        <div class = "container-middle">
+            <h2>
+                活动详情信息
+            </h2>
+            <div class = "image-list">
+                <div>
+                    <img src="./img/1.jpg">
+                </div>
+                <div>
+                    <img src="./img/2.jpg">
+                </div>
+                <div>
+                    <img src="./img/3.jpg">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
